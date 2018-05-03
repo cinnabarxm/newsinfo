@@ -14,6 +14,7 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+    // 如果首页只是设置path和component的话，一个/会匹配所有导致首页一直会高亮
     {
       path:"/",
       redirect:"/home"
@@ -42,5 +43,6 @@ export default new Router({
       path:"/newslist",
       component:NewsList
     }
-  ]
+  ],
+  linkActiveClass:"mui-active"
 })
